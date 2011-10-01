@@ -46,7 +46,7 @@ COptions =  -DLOGSYS_FLAG
 # Dependencies
 #
 
-AppObjects = btcui.o lcdgraphics.o bitmaps.o VerixPlatform.o
+AppObjects = btcui.o lcdgraphics.o bitmaps.o VerixPlatform.o bitstream.o mask.o mmask.o mqrspec.o qrencode.o qrinput.o qrspec.o rscode.o split.o
 AppHeaders = lcdgraphics.h platform.h
 
 
@@ -111,4 +111,34 @@ sf600.o : sf600.c $(AppHeaders)
 bitmaps.o : bitmaps.c $(AppHeaders) 
 	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) bitmaps.c
 
+bitstream.o : bitstream.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) bitstream.c
+	
+mask.o : mask.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) mask.c
+	
+mmask.o : mmask.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) mmask.c
+
+mqrspec.o : mqrspec.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) mqrspec.c
+	
+#qrenc.o : qrenc.c $(AppHeaders) 
+#	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) qrenc.c
+
+qrencode.o : qrencode.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) qrencode.c
+
+qrinput.o : qrinput.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) qrinput.c
+	
+qrspec.o : qrspec.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) qrspec.c
+
+rscode.o : rscode.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) rscode.c
+
+split.o : split.c $(AppHeaders) 
+	$(VRXSDK)\bin\vrxcc -c $(Includes)  $(COptions) split.c
+	
 	
