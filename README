@@ -1,0 +1,15 @@
+This is a stub application that runs on the VeriFone Verix series of POS machines.  It requires the VeriFone Verix V SDK in order to compile the code and sign the binary.
+
+File listing:
+
+bitmaps.c - a font that has been encoded into a large array.
+btcui.c - the main() function so far.
+cards.vft - a dummy font file needed by VeriFone to enable raster access to the full LCD display 
+dl.bat - a batch file that downloads the compiled application to a terminal via serial port.
+lcdgraphics.c,h - code that renders text into a 128x64 bitmap for the display
+Makefile - builds the app.
+platform.h - header for a series of abstraction calls for the OS, to help enable cross-platform support
+VerixPlatform.c - platform-specific calls for VeriFone Verix.
+vfbtc.dld - options and file listing for the serial downloader
+vfbtc.fst - file signing config file for the VF file signing tool
+
