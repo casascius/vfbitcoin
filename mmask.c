@@ -150,7 +150,7 @@ unsigned char *MMask_mask(int version, unsigned char *frame, QRecLevel level)
 	int i;
 	unsigned char *mask, *bestMask;
 	int maxScore = 0;
-	int bestMaskNum = 0;
+//	int bestMaskNum = 0;
 	int score;
 	int width;
 
@@ -167,7 +167,7 @@ unsigned char *MMask_mask(int version, unsigned char *frame, QRecLevel level)
 		score = MMask_evaluateSymbol(width, mask);
 		if(score > maxScore) {
 			maxScore = score;
-			bestMaskNum = i;
+//			bestMaskNum = i;
 			free(bestMask);
 			bestMask = mask;
 			mask = (unsigned char *)malloc(width * width);

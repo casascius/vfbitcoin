@@ -928,7 +928,7 @@ static int QRinput_estimateBitStreamSizeOfEntry(QRinput_List *entry, int version
 			break;
 		case QR_MODE_FNC1FIRST:
 			return MODE_INDICATOR_SIZE;
-			break;
+			//break;
 		case QR_MODE_FNC1SECOND:
 			return MODE_INDICATOR_SIZE + 8;
 		default:
